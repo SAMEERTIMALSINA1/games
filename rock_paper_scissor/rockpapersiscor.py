@@ -8,14 +8,14 @@ def user_play():
     user_input = input("Enter rock or paper or scissor: ")
     return user_input
 
-def checker():
-    if computer_play == user_play:
+def checker(computer_choice,user_choice):
+    if computer_choice == user_choice:
         return "Draw"
-    elif computer_play=="rock" and user_play=="scissor":
+    elif computer_choice=="rock" and user_choice=="scissor":
         return "You Lose!"
-    elif computer_play=="paper" and user_play=="rock":
+    elif computer_choice=="paper" and user_choice=="rock":
         return "You Lose!"
-    elif computer_play=="scissor" and user_play=="paper":
+    elif computer_choice=="scissor" and user_choice=="paper":
         return "You Lose!"
     else:
         return "You Win!"
@@ -23,9 +23,9 @@ def checker():
 play_items=["rock","paper","scissor"]
 
 # variable assignment to function
-user_play = user_play()
-computer_play = computer_play()
+user_choice = user_play()
+computer_choice = computer_play()
 
-print(computer_play)
+print(computer_choice)
 
-print(checker())
+print(checker(computer_choice,user_choice))
